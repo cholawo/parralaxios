@@ -4,6 +4,24 @@
         <meta charset="UTF-8">
         <title>Spotify-style scrolling</title>
         <link rel="stylesheet" href="styles.css">
+              <script src="jquery-1.10.2.min.js"></script>
+        <script src="http://markdalgleish.com/projects/stellar.js/demos/js/scrollability.min.js"></script>
+        <script src="http://markdalgleish.com/projects/stellar.js/js/jquery.min.js"></script>
+        		<script language="javascript">		
+		$(function(){
+			$('#page').stellar({
+				horizontalScrolling: false,
+				scrollProperty: 'transform',
+				positionProperty: 'transform',
+				verticalOffset: -100
+			});
+			
+			//Prevent text selection
+			$(document).mousedown(function(e){
+				e.preventDefault();
+			});
+		});
+		</script>
 </head>
 <body>
   <div id=container class="touched">
@@ -23,24 +41,5 @@
        
     </div><!--page-->
   </div><!--container-->
-        <script src="jquery-1.10.2.min.js"></script>
-        <script src="http://markdalgleish.com/projects/stellar.js/demos/js/scrollability.min.js"></script>
-        <script src="http://markdalgleish.com/projects/stellar.js/js/jquery.min.js"></script>
-        		<script language="javascript">		
-		$(function(){
-			$('#page').stellar({
-				horizontalScrolling: false,
-				scrollProperty: 'transform',
-				positionProperty: 'transform',
-				verticalOffset: -100
-			});
-			
-			//Prevent text selection
-			$(document).mousedown(function(e){
-				e.preventDefault();
-			});
-		});
-		</script>
-
 </body>
 </html>
